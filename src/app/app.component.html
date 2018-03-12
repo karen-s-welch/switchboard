@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="centeredHeader">
+    Switchboard
+  </h1>
+  <div id="btnBox">
+    <div *ngFor="let switch of buttons; let i = index" [ngClass]="{'btnBack':true}">
+      <button (click)="switchBtn(i)" [ngClass]="{'onBtn': switch, 'offBtn': !switch}">{{ switch ? 'On' : 'Off' }}</button>
+    </div>
+  </div>
+</div>
